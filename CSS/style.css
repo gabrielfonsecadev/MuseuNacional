@@ -137,6 +137,7 @@ object {
     nav {
         width: 90%;
         justify-content: space-between;
+        padding-top: 45px;
     }
 
     #mobile-menu {
@@ -162,11 +163,9 @@ object {
         align-items: flex-end;
         gap: 40px;
 
-        margin-top: 20px;
-        padding-top: 30px;
+        margin-top: 60px;
         padding-right: 20px;
-        width: 40vw;
-        top: 8vh;
+        width: 130px;
         right: 0;
         height: 92vh;
         
@@ -184,7 +183,7 @@ object {
 
     main {
         width: 90%;
-        margin-top: -70px;
+        margin-top: -90px;
         justify-content: center;
         flex-direction: column;
     }
@@ -195,7 +194,7 @@ object {
 
     #museu, #arte {
         object-fit: cover;
-        height: 270px;
+        height: 240px;
     }
 
     #arte {
