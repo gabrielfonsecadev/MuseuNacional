@@ -10,10 +10,12 @@ body {
     overflow-x: hidden;
 }
 
+
+/*Conteúdo do cabeçalho*/
 header {
     box-sizing: border-box;
     height: 200px;
-    background-color: rgba(39,34,23,255);
+    background-color: #262318;
 }
 
 #mobile-menu {
@@ -28,10 +30,9 @@ nav {
     justify-content: space-between;
 }
 
-li {
+nav li, footer li {
     display: inline;
     color: #a86e14;
-    list-style: none;
     text-transform: uppercase;
     padding: 0 10px;
     font-size: 0.8em;
@@ -44,9 +45,10 @@ a {
 li:hover {
     color: #d7932e;
 }
+/*Fim do conteúdo do cabeçalho*/
 
 
-
+/*Conteúdo principal*/
 main {
     width: 80%;
     margin: auto;
@@ -60,14 +62,68 @@ section {
     width: 65%;
 }
 
-aside {
-    width: 33%;
+article {
+    margin: 10px auto;
+    padding: 15px;
+    box-sizing: border-box;
+    width: 50%;
+}
+
+.main-conteudo {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.main-conteudo article {
+    margin: 0;
+}
+
+.main-conteudo h4 {
+    color: rgb(64, 139, 64);
+    text-transform: uppercase;
+    margin: 10px 0;
+    margin-top: 15px;
+}
+
+.main-conteudo h5 {
+    color: rgb(64, 139, 64);
+    text-transform: uppercase;
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.main-conteudo ul {
+    list-style: disc;
+    padding-left: 35px;
+}
+
+.main-conteudo a {
+    text-transform: capitalize;
+    color: #996313;
+    display: block;
+    padding-bottom: 5px;
+}
+
+.main-conteudo a:hover {
+    color: #d7932e;
 }
 
 #museu, #arte {
     width: 100%;
     object-fit: cover;
     height: 350px;
+}
+/*Fim do onteúdo principal*/
+
+
+/*Conteúdo lateral*/
+aside {
+    width: 33%;
+}
+
+aside article {
+    width: 100%;
 }
 
 #visita {
@@ -78,8 +134,9 @@ aside {
     margin: 15px 0;
 }
 
-#visita h4 {
+aside h4 {
     color: #a86e14;
+    text-transform: uppercase;
 }
 
 #num-pessoas {
@@ -87,46 +144,67 @@ aside {
     object-position: right top;
 }
 
-
-
-article {
-    width: 95%;
-    margin: 10px auto;
-    padding: 15px;
-    box-sizing: border-box;
-}
-
-aside article {
+#disponibilidade {
+    border: none;
+    border-radius: 2px;
+    padding: 10px;
     width: 100%;
+    cursor: pointer;
+    background-color: #b8a589;
+    color: #ffffff;
+    transition: all 0.06s ease-in-out;
 }
 
-h4 {
-    color: rgb(64, 139, 64);
-    text-transform: uppercase;
+#disponibilidade:hover {
+    background-color: #baa98c;
 }
 
-object {
-    width: 420px;
-    height: 350px;
+#disponibilidade:active {
+    transform: translateY(2px);
+    background-color: #ac997d;
 }
 
+#galeria {
+    padding: 0;
+}
 
-#rodape {
+#titulo-galeria {
+    text-align: center;
+    padding-top: 15px;
+    background-color: #ebe1d5;
+}
+
+#fotos-galeria {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    background-color: #ebe1d5;
+}
+
+#fotos-galeria a {
+    background: url(../assets/fundo-foto.png) no-repeat;
+    padding: 17px;
+    margin: 10px;
+}
+/*Fim do conteúdo lateral*/
+
+
+/*Cabeçalho*/
+footer {
     text-align: center;
 }
 
-#rodape li {
-    font-size: 0.75em;
-}
-
-#rodape small {
+footer small {
     line-height: 40px;
     color: rgb(47, 47, 47);
 }
+/*Fim do cabeçalho*/
+
 
 
 @media (max-width: 1024px) {
-    :root, h4 {
+    :root {
         font-size: 0.9em;
     }
 
@@ -135,15 +213,25 @@ object {
     }
 
     nav {
-        width: 90%;
+        width: 100%;
         justify-content: space-between;
-        padding-top: 45px;
+        padding-top: 35px;
+        position: fixed;
+        background-color: #262318;
+        height: 80px;
+        box-sizing: border-box;
+    }
+
+    nav figure:nth-child(1) {
+        padding: 0 6%;
     }
 
     #mobile-menu {
         cursor: pointer;
         display: block;
         margin-top: -5px;
+        height: 0;
+        padding: 0 20px;
     }
     
     #mobile-menu div {
@@ -163,17 +251,19 @@ object {
         align-items: flex-end;
         gap: 40px;
 
-        margin-top: 60px;
+        margin-top: 35px;
+        padding-top: 25px;
         padding-right: 20px;
         width: 130px;
         right: 0;
-        height: 92vh;
+        height: 100vh;
         
         background-color: rgba(39,34,23,255);
     }
 
     .ativo .lista {
         transform: translateX(0);
+        position: fixed;
     }
 
     .lista li {
@@ -187,9 +277,18 @@ object {
         justify-content: center;
         flex-direction: column;
     }
-    
+
     aside, section {
         width: 100%;
+    }
+
+    article {
+        width: 100%;
+    }
+
+    iframe {
+        width: 100%;
+        height: 190px;
     }
 
     #museu, #arte {
@@ -201,7 +300,11 @@ object {
         display: none;
     }
 
-    #rodape img {
+    #fotos-galeria a {
+        margin: 10px;
+    }
+
+    footer img {
         width: 90%;
     }
 }
