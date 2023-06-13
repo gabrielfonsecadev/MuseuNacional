@@ -12,7 +12,7 @@
 Este é um site para o Museu Nacional. 🏛️<br> 
 O site é completamente responsivo! 📱
 
-## Linguagens 🧑🏽‍💻
+### Linguagens utilizadas 🧑🏽‍💻
 - HTML <br>
 - CSS <br>
 - JS
