@@ -1,4 +1,5 @@
-<img src="assets/Capa-README.png" width="4000">
+<br><br>
+<img src="assets/Capa-READMe.png" width="4000">
 
 ## <a href="https://gabrielfonsecadev.github.io/MuseuNacional/" target="_blank">Acesse o projeto finalizado aqui!</a>
 
